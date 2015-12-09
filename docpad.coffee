@@ -3,7 +3,11 @@
 
 # Define the DocPad Configuration
 docpadConfig = {
-	# ...
+  templateData:
+    site:
+      title: "Loop Architectural Materials"
+
+    getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title
 }
 
 # Export the DocPad Configuration
